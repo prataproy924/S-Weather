@@ -66,3 +66,45 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.weather-container {
+  font-family: sans-serif;
+  max-width: 500px;
+  margin: 20px 20px;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #daffb0;
+}
+
+.weather-title {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.weather-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.weather-detail:last-child {
+  border-bottom: none;
+}
+
+.weather-detail-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.weather-detail-value {
+  color: #333;
+}
