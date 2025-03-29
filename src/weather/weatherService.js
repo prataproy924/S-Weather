@@ -7,8 +7,8 @@ const options = {
   method: 'GET',
   url: 'https://api.tomorrow.io/v4/weather/realtime',
   params: {location: location, apikey: 'Hb1L6VjSUJe8ZtYWQvx2UA58FE6LCMAc'},
-  headers: {accept: 'application/json', 'accept-encoding': 'deflate, gzip, br'}
-}
+  headers: {accept: 'application/json', 'accept-encoding': 'deflate, gzip, br'},
+};
 const response = await axios.request(options);
 return response.data;
       }

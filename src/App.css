@@ -5,29 +5,38 @@
   text-align: center;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-/* Styling for the app container */
-.app-container {
-  display: flex;
-  justify-content: center; /* Center the scrollable container horizontally */
-  align-items: center;
-  height: 100vh; /* Full viewport height */
-  background-color: #f0f8ff; /* Light blue background */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* Scrollable container */
-.scroll-container {
-  width: 90%; /* Adjust the width as needed */
-  max-height: 80vh; /* Set a maximum height for the scrollable area */
-  overflow-y: auto; /* Enable vertical scrolling */
-  border: 1px solid #ccc; /* Optional: Add a border for visibility */
-  border-radius: 8px; /* Optional: Rounded corners */
-  padding: 16px; /* Add some padding inside the container */
-  background-color: #ffffff; /* White background for better contrast */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

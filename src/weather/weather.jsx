@@ -4,7 +4,7 @@ import WeatherService from './weatherService'; // Adjust the path if needed
 import '../index.css'; // Adjust the path if needed
 
 function Weather(props) {
-  const [city, setCity] = useState('kolkata');
+  const [city, setCity] = useState(props.name);
   const [realtimeData, setRealtimeData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -28,8 +28,10 @@ function Weather(props) {
         setLoading(false);
       }
     }
+    if (city){
     
     fetchRealtimeWeather();
+    }
   }, [city]);
 
   if (loading) return <p>Loading...</p>;
